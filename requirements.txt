@@ -1,0 +1,15 @@
+transformers>=4.41.0
+torch>=2.1.0
+accelerate>=0.33.0
+sentencepiece>=0.2.0
+
+# For Agent
+unsloth
+torch
+xformers
+trl
+peft
+accelerate
+bitsandbytes
+gradio
+pydantic
