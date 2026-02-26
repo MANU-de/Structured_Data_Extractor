@@ -1,6 +1,6 @@
 ## Structured Data Extractor – Invoice Agent Service
 
-This repository contains an end‑to‑end pipeline for training, deploying, and consuming a **LLM‑based invoice extractor**.  
+This repository contains an end‑to‑end pipeline for training, deploying and consuming a **LLM‑based invoice extractor**.  
 The model is deployed as a **Modal** web service and can be exercised via a simple **Python client**.
 
 ---
