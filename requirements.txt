@@ -1,15 +1,21 @@
-transformers>=4.41.0
+# --- Core Machine Learning & Fine-Tuning --- 
+unsloth
 torch>=2.1.0
+transformers>=4.41.0
 accelerate>=0.33.0
+bitsandbytes
+xformers
+peft
+trl
 sentencepiece>=0.2.0
 
-# For Agent
-unsloth
-torch
-xformers
-trl
-peft
-accelerate
-bitsandbytes
+# --- Deployment & Agent UI ---
 gradio
 pydantic
+fastapi
+
+# --- Client, Monitoring & Utilities ---
+httpx
+python-dotenv
+wandb
+modal
