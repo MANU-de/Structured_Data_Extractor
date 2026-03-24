@@ -4,31 +4,32 @@ This repository contains an end‑to‑end pipeline for training, deploying and 
 The model is deployed as a **Modal** web service and can be exercised via a simple **Python client**.
 
 ---
+## 🛠 Environment & Setup
 
-## Environment & Dependencies
+### 1. Prerequisites
+- **Python**: 3.10 or higher is required.
+- **Hardware**: Local installation only requires a CPU for the client. Deployment/Training requires an NVIDIA GPU (T4 or better).
 
-- **Python**: **3.10+** 
-- **Core dependencies** (see `requirements.txt`):
-  - `torch`, `transformers`, `accelerate`, `bitsandbytes`
-  - `unsloth`, `trl`, `peft`, `xformers`
-  - `pydantic`, `gradio`
-  - For the client: `httpx`
-- **Modal CLI**:
-  - Install with:
+### 2. Installation & Virtual Environment
+It is highly recommended to use a virtual environment to keep your project dependencies isolated.
 
 ```bash
-pip install modal
-```
+# Create and activate a virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
 
-- **Install project dependencies** 
-
-```bash
+# Install all project dependencies (Core, Client, and Deployment)
 pip install -r requirements.txt
-pip install httpx
 ```
+---
+## Authentication & Infrastructure Setup
 
-> **Tip**: Use a virtual environment (`python -m venv .venv && source .venv/bin/activate`) to keep dependencies isolated.
+This project uses Modal for serverless GPU deployment. Once the library is installed, you must link your local environment to your Modal account.
 
+```bash
+# Authenticate with Modal
+modal auth signup
+```
 ---
 
 ## Required Secrets & API Keys
